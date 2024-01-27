@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Inside at Deep</h1>
+    <p> <a href="/">Home</a> </p>
+    <h1>Admin: {{admin}}</h1>
+    {% if age >= 21 %}
+    <h3>Biyer boyos hoya gese</h3>
+    {% elif age == 20 %}
+    <h3>R matro ak-bosor</h3>
+    {% else %}
+    <h3>Age 21 hok</h3>
+    {% endif %}
+    
+    <hr>
+
+    <table border="1" width="500">
+        <tr>
+            <th>ID</th>
+            <th>Subject</th>
+            <th>Teacher</th>
+        </tr>
+        {% for sub in subjects %}
+        <tr>
+            <td>{{ sub.id }}</td>
+            <td>{{ sub.name }}</td>
+            <td>{{ sub.teacher }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <hr>
+
+    <p>Admin lenght: {{ admin | length }} </p>
+    <p>Word: {{ blog | truncatewords:6 }} </p>
+    <p>Charecter: {{ blog | truncatechars:32 }} </p>
+
+</body>
+</html>
