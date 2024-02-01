@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load first_tag %}
+{% block title %} About Page {% endblock %}
+
+{% block content %} <h1> About Page </h1> <hr>
+<h2> Same: {{author}} </h2>
+<h4>Using Tag: {{author | change_name:'change'}} </h4>
+<h1> {{author | change_name:'title'}} </h1>
+
+
+{% endblock %}
