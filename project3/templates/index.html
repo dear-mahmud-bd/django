@@ -1,12 +1,19 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <h1>This is my First Django Template ...</h1>
     <p> <a href="/first_app/cources/"> Deep Inside </a> </p>
+    {% static 'images/app.png' as app %}
+    <img src="{{app}}" alt="App" style="width: 700px;">
+    <img src="{% static 'images/db.png' %}" alt="Database">
+    
+    <script src="{% static 'js/app.js' %}"></script>
 </body>
 </html>
