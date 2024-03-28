@@ -20,3 +20,4 @@ class ProductReview(models.Model):
         unique_together = ('product', 'user') # one user reviewed one product
     def __str__(self):
         return f"{self.user.username} - {self.product.name} - Rating: {self.rating}"
+    
